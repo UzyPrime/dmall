@@ -23,7 +23,7 @@ async def dmall(interaction: discord.Interaction, message: str):
     if not interaction.user.guild_permissions.administrator:
         embed = discord.Embed(
             title="",
-            description="Vous devez être administrateur pour utiliser cette commande.",
+            description="Vous devez être administrateur pour utiliser cette commande",
         )
         await interaction.response.send_message(embed=embed, ephemeral=True)
         return
@@ -88,7 +88,7 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         embed = discord.Embed(
             title="",
-            description="Vous n'avez pas les permissions nécessaires pour cette commande",
+            description="t'as pas de perms",
         )
         await ctx.send(embed=embed)
     elif isinstance(error, commands.CommandNotFound):
@@ -102,7 +102,8 @@ async def on_command_error(ctx, error):
 
 if __name__ == "__main__":
     if TOKEN == "your_bot_token_here":
-        print("Erreur: Veuillez configurer votre token dans config.py")
+        print("Erreur: change le token dans config.py avant trdc")
         exit(1)
     
     bot.run(TOKEN)
+
